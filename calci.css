@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'DigitalFont';
+    src: url('fonts/digital-7.ttf') format('truetype');
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 32px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'DigitalFont', Arial, sans-serif;
+    background: #222;
+    color: #0f0;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn, #clear, .equal-btn {
+    padding: 20px;
+    font-size: 22px;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover, #clear:hover, .equal-btn:hover {
+    background-color: #555;
+}
+
+.equal-btn {
+    grid-column: span 4;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.equal-btn:hover {
+    background-color: #45a049;
+}
